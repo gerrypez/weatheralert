@@ -31,7 +31,7 @@ a {text-decoration: none;color: #dbe7f9;}
 .time a:visited {color:#909090;}
 .time a:hover {color:#FFFFFF;text-decoration: none;}
 .time a:active {color:#909090;}
-.windy {clear:left;overflow: visible;width: 650px;height: 600px;}
+.windy {clear:left;overflow: visible;width: 650px;height: 600px; }
 
 /* for pull down menus, sites hidden at first */
 
