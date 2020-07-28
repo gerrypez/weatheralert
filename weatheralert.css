@@ -2,6 +2,10 @@
 a {text-decoration: none;color: #dbe7f9;}
 .awall {color: #dbe7f9;}
 #bottom {clear:left; float:left; width:750px; height:200px;}
+.box_grean {background-color:#1EFC0F; clear:left; float:left; width: 50px; height:22px; text-align: center; margin-left:40px;}
+.box_lightgreen {background-color:#DCF285; float:left; margin-left:5px; width: 50px; height:22px; text-align: center;}
+.box_yellow {background-color:#FCEC0F; float:left; margin-left:5px; width: 50px; height:22px; text-align: center;}
+.box_xc {background-color:hotpink; float:left; margin-left:10px; width: 22px; height:22px; text-align: center; color:#FFF; border-radius: 50%;}
 .dot {height: 5px;width: 5px;background-color: hotpink;border-radius: 50%;margin-left: 17px;float: left;top: -2em;}
 .error_message {margin: 4px 0 0 10px;}
 .errorcheck {color:red;}
@@ -26,6 +30,7 @@ a {text-decoration: none;color: #dbe7f9;}
 .title_site {float:left; font-size:large; color:white; background-color:slategray; width:200px; padding-left:10px; padding-right:20px; padding-top:5px; height:35px;}
 .title_blue {float:left; font-size:large; color:white; background-color:#525A78; width:200px; padding-left:10px; padding-right:20px; padding-top:5px; height:35px;}
 .title_exp {float:left;font-size: large; color:white;background-color: darkgray;width: 200px;padding-left: 10px;padding-right:20px;padding-top: 5px;height:35px;}
+.thetitle {font-size:1.5em; text-align:left; color:#FFF; margin:30px 0 0 40px;}
 .time {color: #909090;margin-left: 10px;font-size:10px;}
 .time a:link {color:#4B4B4B;}
 .time a:visited {color:#909090;}

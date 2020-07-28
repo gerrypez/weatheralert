@@ -1,5 +1,11 @@
 <?php
 
+/*
+*
+*  This is Error Check script looking for errors in the MySQL table (ex. out of date fields)
+*
+*/
+
 // display errors
 ini_set("allow_url_fopen", 1);
 ini_set('display_errors', 1);
@@ -56,7 +62,6 @@ function checkUpdate ($site_score, $station, $gridX, $gridY) {
 }
 
 
-
 /*
 *
 *  Check for site_name duplicates
@@ -101,8 +106,6 @@ function checkupdateStamp () {
     }
 }
 checkupdateStamp();
-
-
 
 
 /*
@@ -175,7 +178,6 @@ function checkjsonLift () {
 checkjsonLift();
 
 
-
 /*
 *
 *  lat, lng needs to match station, gridX, gridY
@@ -211,7 +213,6 @@ function checkLatlng ($site_score, $station, $gridX, $gridY, $lat, $lng) {
         }
 
 }
-
 
 
 

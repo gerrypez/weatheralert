@@ -1,5 +1,12 @@
 <?php
 
+/*
+*
+*  This is a cron job that runs every hour and updates the MySQL tables holding the NWS API JSON return
+*  Weather JSON data is stored in MySQL because the NWS API is unreliable to call
+*
+*/
+
 // display errors
 ini_set("allow_url_fopen", 1);
 ini_set('display_errors', 1);
