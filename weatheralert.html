@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lift Soarcast</title>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="weatheralert.css">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+
+</head>
+
+<body style="background-color:black;">
+
+<p id="thetitle" style="font-size:1.5em; text-align:left; color:#FFF; margin:30px 0 0 40px;">Lift Paragliding Soarcast</p>
+
+<div style="clear:left; float:left;margin-top:30px; margin-bottom:5px;">
+  <div style="background-color:#1EFC0F; clear:left; float:left; width: 50px; height:22px; text-align: center; margin-left:40px;">ideal</div>
+  <div style="background-color:#DCF285; float:left; margin-left:5px; width: 50px; height:22px; text-align: center;">likely</div>
+  <div style="background-color:#FCEC0F; float:left; margin-left:5px; width: 50px; height:22px; text-align: center;">maybe</div>
+  <div style="background-color:hotpink; float:left; margin-left:10px; width: 22px; height:22px; text-align: center; color:#FFF; border-radius: 50%;">xc</div>
+  <div class="spinner" style="margin-left:100px;float:left;"><img src="images/spinner.gif" width="20"></div>
+</div>
+
+<!-- big_sur -->
+<div id="big_sur" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">big sur</div>
+    <div class="score" id="big_sur_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=35.971&lon=-121.453&wfo=MTR&zcode=CAZ517&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"/>
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.453&lat=35.971#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.971&lon=-121.453&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly.</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/35.971/-121.453/wind?35.971,-121.453,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://marine.weather.gov/MapClick.php?zoneid=pzz565#" target="_blank">Coastal Waters</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,35.971,-121.453,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/35.971,-121.453" target="_blank">35.971, -121.453</a></span>
+  </div>
+</div>
+
+<!-- blue_rock -->
+<div id="blue_rock" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">blue rock</div>
+  <div class="score" id="blue_rock_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.1384&lon=-122.1959&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640" />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.1959&lat=38.140#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.140&lon=-122.1959&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.140/-122.1959/wind?38.140,-122.1959,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAVALLE53" target="_blank">KCAVALLE53 * </a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.140&lon=-122.1959&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.1384,-122.1959" target="_blank">38.1384,-122.1959</a></span>
+  </div>
+</div>
+
+<!-- channing -->
+<div id="channing" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">channing west</div>
+  <div class="score" id="channing_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.098&lon=-122.180&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.180&lat=38.098#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.098&lon=-122.180&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.098/-122.180/wind?38.098,-122.180,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCABENIC57" target="_blank">Local Station KCABENIC57</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.098,-122.180" target="_blank">38.098,-122.180</a></span>
+  </div>
+</div>
+
+<!-- channing_east -->
+<div id="channing_east" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">channing east</div>
+  <div class="score" id="channing_east_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.098&lon=-122.180&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+    <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.180&lat=38.098#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.098&lon=-122.180&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.098/-122.180/wind?38.098,-122.180,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCAVALLE1127" target="_blank">KCAVALLE1127</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.098&lon=-122.180&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.098,-122.180" target="_blank">38.098,-122.180</a></span>
+  </div>
+</div>
+
+<!-- coloma -->
+<div id="coloma" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">cronin, sagebrush</div>
+  <div class="score" id="coloma_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.822&lon=-120.889&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"/>
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-120.889&lat=38.822#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.822&lon=-120.889&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.822/-120.889/wind?38.822,-120.889,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/sierra-nevada/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSAC&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,38.822,-120.889,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.822,-120.889" target="_blank">38.822, -120.889</a></span>
+  </div>
+</div>
+
+<!-- diablo_juniper -->
+<div id="diablo_juniper" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">diablo juniper</div>
+  <div class="score" id="diablo_juniper_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.881&lon=-121.914&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"/>
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.914&lat=37.881#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.881&lon=-121.914&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.881/-121.914/wind?37.881,-121.914,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCCR&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://bit.ly/2K2lyL3" target="_blank">6hr Current Wind</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.881,-121.914,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" target="_blank">Webcam top</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.881,-121.914" target="_blank">37.881, -121.914</a></span>
+  </div>
+</div>
+
+<!-- diablo_towers -->
+<div id="diablo_towers" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">diablo towers</div>
+  <div class="score" id="diablo_towers_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.881&lon=-121.914&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640" />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.914&lat=37.881#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.881&lon=-121.914&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.881/-121.914/wind?37.881,-121.914,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCCR&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://bit.ly/2K2lyL3" target="_blank">6hr Current Wind</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.881,-121.914,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.alertwildfire.org/southeastbay/index.html?camera=Axis-Diablo" target="_blank">Webcam top</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.881,-121.914" target="_blank">37.881, -121.914</a></span>
+  </div>
+</div>
+
+<!-- drakes -->
+<div id="drakes" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">drakes point reyes</div>
+  <div class="score" id="drakes_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.0265&lon=-122.9634&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.9634&lat=38.0265#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.0265&lon=-122.9634&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.0265/-122.9634/wind?38.0265,-121.965,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSFO&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://marine.weather.gov/MapClick.php?zoneid=pzz545#" target="_blank">Coastal Water Forecast</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9415020&legacy=1" target="_blank">Tide</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.ssd.noaa.gov/goes/west/wfo/mtr/h5-loop-vis.html" target="_blank">Satellite Loop</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://fog.today" target="_blank">fog.now</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://weather.cod.edu/satrad/?parms=local-Tahoe-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">Satellite GEOS-17</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.0265,-122.9634" target="_blank">38.0265, -122.9634</a></span>
+  </div>
+</div>
+
+<!-- dunlap -->
+<div id="dunlap" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">dunlap</div>
+  <div class="score" id="dunlap_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=36.765&lon=-119.098&wfo=HNX&zcode=CAZ096&gset=15&gdiff=5&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.098&lat=36.765#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=36.765&lon=-119.098&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/36.765/-119.098/wind?36.765,-119.098,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/sierra-nevada/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/36.765,-119.098" target="_blank">36.765, -119.098</a></span>
+  </div>
+</div>
+
+<!-- ed_levin -->
+<div id="ed_levin" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">ed levin</div>
+  <div class="score" id="ed_levin_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.475&lon=-121.861&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"/>
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.861&lat=37.475#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.475&lon=-121.861&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.475/-121.861/wind?37.475,-121.861,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KHWD&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://windslammer.hang-gliding.com/WindSlammer/" target="_blank">WindSlammer</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.475,-121.861,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://topaflyers.com/weather/soundings/oak.png" target="_blank">Skew-T</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.475,-121.861" target="_blank">37.475, -121.861</a></span>
+  </div>
+</div>
+
+<!-- elk -->
+<div id="elk" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">elk</div>
+  <div class="score" id="elk_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.277&lon=-122.941&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.941&lat=39.277#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.277&lon=-122.941&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.277/-122.941/wind?39.277,-122.941,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.277,-122.941" target="_blank">39.277, -122.941</a></span>
+  </div>
+</div>
+
+<!-- hat_creek -->
+  <div id="hat_creek" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">hat creek</div>
+    <div class="score" id="hat_creek_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=40.842&lon=-121.428&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.428&lat=40.842#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=40.842&lon=-121.428&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/40.842/-121.428/wind?40.842,-121.428,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/40.842,-121.428" target="_blank">40.842, -121.428</a></span>
+  </div>
+</div>
+
+<!-- hull -->
+<div id="hull" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">hull</div>
+  <div class="score" id="hull_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.509&lon=-122.937&wfo=EKA&zcode=CAZ114&gset=18&gdiff=5&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.937&lat=39.509#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.509&lon=-122.937&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.509/-122.937/wind?39.509,-122.937,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.509,-122.937" target="_blank">39.509, -122.937</a></span>
+  </div>
+</div>
+
+<!-- indian valley -->
+<div id="indianvalley" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">indian valley</div>
+  <div class="score" id="indianvalley_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=40.194&lon=-120.923&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-120.923&lat=40.194#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=40.194&lon=-120.923&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/40.194/-120.923/wind?40.194,-121.923,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/sierra-nevada/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/40.194,-120.923" target="_blank">40.194, -120.923</a></span>
+  </div>
+</div>
+
+<!-- goat -->
+<div id="goat" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">jenner, goat rock</div>
+  <div class="score" id="goat_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.443&lon=-123.122&wfo=MTR&zcode=CAZ505&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-123.122&lat=38.443#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.443&lon=-123.122&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.443/-123.122/wind?38.443,-123.122,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.443&lon=-123.122&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,38.443,-123.122,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.443,-123.122" target="_blank">38.443, -123.122</a></span>
+  </div>
+</div>
+
+<!-- grade -->
+<div id="grade" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">jenner, grade</div>
+  <div class="score" id="grade_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.478&lon=-123.163&wfo=MTR&zcode=CAZ505&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-123.163&lat=38.478#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.478&lon=-123.163&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.478/-123.163/wind?38.478,-123.163,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.478&lon=-123.163&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,38.443,-123.122,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.478,-123.163" target="_blank">38.478, -123.163</a></span>
+  </div>
+</div>
+
+<!-- lagoon -->
+<div id="lagoon" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">lagoon valley</div>
+  <div class="score" id="lagoon_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&amp;lon=-122.002&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.002&lat=38.333#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.333&lon=-122.002&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.333/-122.002/wind?38.333,-122.002,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KVCB&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.333,-122.002" target="_blank">38.333,-122.002</a></span>
+  </div>
+</div>
+
+<!-- sand_city -->
+<div id="sand_city" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">marina, sand city</div>
+  <div class="score" id="sand_city_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=36.626&lon=-121.844&wfo=MTR&zcode=CAZ530&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.844&lat=36.626#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=36.626&lon=-121.844&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/36.626/-121.844/wind?36.626,-121.844,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMRY&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://marine.weather.gov/MapClick.php?zoneid=pzz560#" target="_blank">Coastal water</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9413450" target="_blank">Tides</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://ccwt1.dyndns.org:8080/291971381158873_2011.html" target="_blank">Real-Time Wind</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.surfline.com/surf-report/marina-state-beach-central-california_4957/" target="_blank">Webcam</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.ssd.noaa.gov/goes/west/wfo/mtr/h5-loop-vis.html" target="_blank">Satellite Loop</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://weather.cod.edu/satrad/?parms=local-Tahoe-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">Satellite GEOS-17</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,36.626,-121.844,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://fog.today" target="_blank">fog.now</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=36.636&lon=-121.844&zoom=12" target="_blank">Local Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/36.626,-121.844" target="_blank">36.626,-121.844</a></span>
+  </div>
+</div>
+
+<!-- mission -->
+<div id="mission" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">mission</div>
+  <div class="score" id="mission_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.518&lon=-121.892&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640" />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.892&lat=37.518#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.518&lon=-121.892&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.518/-121.892/wind?37.518,-121.892,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KHWD&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://windslammer.hang-gliding.com/WindSlammer/" target="_blank">WindSlammer</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://missionpeak.axiscam.net:1920/view/view.shtml?id=535&imagepath=%2Fmjpg%2Fvideo.mjpg&size=1" target="_blank">Webcam</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.518,-121.892,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://topaflyers.com/weather/soundings/oak.png" target="_blank">Skew-T</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.518,-121.892" target="_blank">37.518, -121.892</a></span>
+  </div>
+</div>
+
+
+<!-- musselrock -->
+<div id="musselrock" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">mussel rock, funston</div>
+  <div class="score" id="musselrock_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.674&lon=-122.495&wfo=MTR&zcode=CAZ509&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.495&lat=37.674#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.674&lon=-122.495&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.674/-122.495/wind?37.674,-122.495,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://usairnet.com/cgi-bin/launch/code.cgi?sta=KSFO&model=avn&state=CA&Submit=Change+Location" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414290" target="_blank">Tide</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://marine.weather.gov/MapClick.php?zoneid=pzz545#" target="_blank">Coastal Water</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://flypacifica.com/" target="_blank">Fly Pacifica</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCADALYC1" target="_blank">Wind mussel rock</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCADALYC37" target="_blank">Wind coyote</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCASANFR69" target="_blank">Wind funston</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.flyfunston.org/newwebcam/" target="_blank">Funston Webcam</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://ob-kc.com/" target="_blank">Ocean Beach Webcam</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://fog.today" target="_blank">fog.now</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.ssd.noaa.gov/goes/west/wfo/mtr/h5-loop-vis.html" target="_blank">Satellite Loop</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://weather.cod.edu/satrad/?parms=local-Tahoe-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">Satellite GEOS-17</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.674,-122.495,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.674,-122.495" target="_blank">37.674, -122.495</a></span>
+  </div>
+</div>
+
+<!-- oroville -->
+<div id="oroville" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">oroville</div>
+    <div class="score" id="oroville_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.537&lon=-121.628&wfo=STO&zcode=CAZ016&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.628&lat=39.537#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.537&lon=-121.628&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.537/-121.628/wind?39.537,-121.628,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KCIC&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=39.537&lon=-121.628&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.537,-121.628" target="_blank">39.537, -121.628</a></span>
+  </div>
+</div>
+
+
+<!-- poplar -->
+<div id="poplar" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">poplar</div>
+  <div class="score" id="poplar_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.4554&lon=-122.4447&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.4447&lat=37.4554#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.4554&lon=-122.4447&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.4554/-122.4447/wind?37.4554,-122.4447,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KHAF&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://marine.weather.gov/MapClick.php?zoneid=pzz545#" target="_blank">Coastal Water Forecast</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9415020&legacy=1" target="_blank">Tide</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.4554,-122.4447" target="_blank">37.4554, -122.4447</a></span>
+  </div>
+</div>
+
+
+
+
+<!-- potato -->
+<div id="potato" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">potato hill</div>
+  <div class="score" id="potato_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.317&lon=-122.685&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.685&lat=39.317#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.317&lon=-122.685&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.317/-122.685/wind?39.317,-122.685,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRBL&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.317,-122.685" target="_blank">39.317, -122.685</a></span>
+  </div>
+</div>
+
+<!-- sandybeach -->
+<div id="sandybeach" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">sandy beach vallejo</div>
+  <div class="score" id="sandybeach_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.0772&lon=-122.2398&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.2398&lat=38.0772#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.0772&lon=-122.2398&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.0772/-122.2398/wind?38.0772,-122.2398,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCAVALLE1156" target="_blank">Local Station</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.0772,-122.2398" target="_blank">38.0772, -122.2398</a></span>
+  </div>
+</div>
+
+
+
+
+<!-- st_helena -->
+<div id="st_helena" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">st helena</div>
+  <div class="score" id="st_helena_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.667&lon=-122.628&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.628&lat=38.667#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.667&lon=-122.628&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.667/-122.628/wind?38.667,-122.628,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KAPC&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.667,-122.628" target="_blank">38.667, -122.628</a></span>
+  </div>
+</div>
+
+<!-- tam -->
+<div id="mt_tam" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">tam</div>
+  <div class="score" id="mt_tam_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.9114&lon=-122.625&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10101110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.625&lat=37.911#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.911&lon=-122.625&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=MTR&issuedby=MTR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.911/-122.625/wind?37./911,-122.625,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSFO&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KCAMILLV57" target="_blank">Real-time Wind</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.rntl.net/mttamcam.htm" target="_blank">Webcam Tam</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://108.251.106.249/" target="_blank">Webcam Stinson Beach</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.lawrencehallofscience.org/static/scienceview/scienceview.berkeley.edu/html/view/index.php" target="_blank">Webcam Berkeley Bay</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://marine.weather.gov/MapClick.php?zoneid=pzz545#" target="_blank">Coastal Water Forecast</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.star.nesdis.noaa.gov/GOES/sector_band.php?sat=G17&sector=pnw&band=GEOCOLOR&length=12" target="_blank">Satellite Loop</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://weather.cod.edu/satrad/?parms=local-Tahoe-02-24-0-100-1&checked=map&colorbar=undefined" target="_blank">Satellite GEOS-17</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://fog.today" target="_blank">fog.now</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://tides.mobilegeographics.com/locations/5546.html" target="_blank">Tide</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.911,-122.625,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.911,-122.625" target="_blank">37.911, -122.625</a></span>
+  </div>
+</div>
+
+<!-- tollhouse -->
+<div id="tollhouse" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">tollhouse</div>
+  <div class="score" id="tollhouse_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.015&lon=-119.373&wfo=HNX&zcode=CAZ093&gset=15&gdiff=5&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.373&lat=37.015#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.015&lon=-119.373&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.015/-119.373/wind?37.015,-119.371,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/sierra-nevada/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/-Cloud-base-cbase?cbase,37.911,-122.625,8,m:eHracLq" target="_blank">Clouds</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.015,-119.373" target="_blank">37.015, -119.373</a></span>
+  </div>
+</div>
+
+<!-- vacaridge -->
+<div id="vacaridge" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">vaca ridge</div>
+  <div class="score" id="vacaridge_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.4&lon=-122.106&wfo=MTR&zcode=CAZ507&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"   />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.106&lat=38.400#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.400&lon=-122.106&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.400/-122.106/wind?38.400,-119.371,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://rasp.nfshost.com/norcal-coast/" target="_blank">RASP</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KFAT&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windguru.cz/station/2330" target="_blank">Real Time Wind Guru</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/dashboard/pws/KCANAPA198" target="_blank">Real Time WU</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.400,-122.106" target="_blank">38.400, -122.106</a></span>
+  </div>
+</div>
+
+
+<!-- waddel -->
+<div id="waddel" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">waddel</div>
+    <div class="score" id="waddel_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.089&lon=-122.274&wfo=MTR&zcode=CAZ509&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.274&lat=37.089#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.089&lon=-122.274&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.089/-122.274/wind?37.089,-122.274,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KTRK&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.089,-122.274" target="_blank">37.089, -122.274</a></span>
+  </div>
+</div>
+
+<!-- windy -->
+<div id="windy" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">windy hill</div>
+  <div class="score" id="windy_score"></div>
+    <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.364&lon=-122.245&wfo=MTR&zcode=CAZ511&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640" />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.245&lat=37.364#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.364&lon=-122.245&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.364/-122.245/wind?37.364,-122.245,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KPAO&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.364,-122.245" target="_blank">37.364, -122.245</a></span>
+  </div>
+</div>
+
+
+
+<div style="clear:left;float:left;height:100px; width:300px;margin-left:40px;">
+  <p style="font-size:1.5em;text-align:left;color:#FFF;margin:30px 30px 0 0;">Kiting</p>
+</div>
+
+
+<!-- berkeley -->
+<div id="berkeley" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">berkeley kite park</div>
+    <div class="score" id="berkeley_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.871&lon=-122.319&wfo=MTR&zcode=CAZ508&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.319&lat=37.871#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.871&lon=-122.319&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.871/-122.319/wind?37.871,-122.319,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windalert.com/map#37.871,-122.319,12,1" target="_blank">Wind alert</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=37.871&lon=-122.319&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.871,-122.319" target="_blank">37.871, -122.319</a></span>
+  </div>
+</div>
+
+
+<!-- davis -->
+<div id="davis" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_site">davis</div>
+  <div class="score" id="davis_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.570&lon=-121.820&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640" />
+  </div>
+ <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-121.820&lat=38.570#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.570&lon=-121.820&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.570/-121.820/wind?38.570,-121.820,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windalert.com/map#38.570,-121.820,12,1" target="_blank">Wind alert</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.570&lon=-121.820&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windfinder.com/report/davis_university_airport" target="_blank">davis airport</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://kdwa.awosnet.com/" target="_blank">yolo airport</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.570,-121.820" target="_blank">38.570, -121.820</a></span>
+  </div>
+</div>
+
+<!-- lagoon -->
+<div id="lagoonkite" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_site">lagoon kite</div>
+  <div class="score" id="lagoonkite_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.333&amp;lon=-122.002&amp;wfo=STO&amp;zcode=CAZ017&amp;gset=18&amp;gdiff=3&amp;unit=0&amp;tinfo=PY8&amp;ahour=0&amp;pcmd=10001110000000000000000000000000000000000000000000000000000&amp;lg=en&amp;indu=1!1!1!&amp;dd=&amp;bw=&amp;hrspan=48&amp;pqpfhr=6&amp;psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.002&lat=38.333#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.333&lon=-122.002&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.333/-122.002/wind?38.333,-122.002,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windalert.com/map#38.333,-122.002,12,1" target="_blank">Wind alert</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.333&lon=-122.002&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.333,-122.002" target="_blank">38.333, -122.002</a></span>
+  </div>
+</div>
+
+<!-- shoreline -->
+<div id="shoreline" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">shoreline kite park</div>
+    <div class="score" id="shoreline_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.430&lon=-122.076&wfo=MTR&zcode=CAZ508&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.076&lat=37.430#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.430&lon=-122.076&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.430/-122.076/wind?37.430,-122.076,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windalert.com/map#37.430,-122.076,12,1" target="_blank">Wind alert</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=37.430&lon=-122.076&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.430,-122.076" target="_blank">37.430, -122.076</a></span>
+  </div>
+</div>
+
+<!-- vallejo -->
+<div id="vallejo" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_site">vallejo ind. park</div>
+  <div class="score" id="vallejo_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.102&lon=-122.264&wfo=STO&zcode=CAZ017&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640" />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.264&lat=38.102#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.102&lon=-122.264&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.102/-122.264/wind?38.102,-122.264,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windalert.com/map#38.102,-122.264,12,1" target="_blank">Wind alert</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.wunderground.com/wundermap?lat=38.102&lon=-122.264&zoom=13" target="_blank">Weather Stations</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.102,-122.264" target="_blank">38.102, -122.264</a></span>
+  </div>
+</div>
+
+<div style="clear:left;float:left;height:100px; width:300px;margin-left:40px;">
+  <p style="font-size:1.5em;text-align:left;color:#FFF;margin:30px 30px 0 0;">Trips</p>
+</div>
+
+
+<!-- tahoe -->
+<div id="tahoe" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">tahoe, reno</div>
+    <div class="score"></div>
+</div>
+
+
+<!-- day_dreams -->
+<div id="day_dreams" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">day dreams (closed) </div>
+  <div class="score" id="day_dreams_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.242&lon=-120.008&wfo=REV&zcode=CAZ072&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-120.008&lat=39.242#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.242&lon=-120.008&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.242/-120.008/wind?39.242,-120.008,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KTRK&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.242,-120.008" target="_blank">39.242, -120.008</a></span>
+  </div>
+</div>
+
+<!-- duck_hill -->
+<div id="duck_hill" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">duck hill, mcclellan</div>
+  <div class="score" id="duck_hill_score"></div>
+<div class="nws_image">
+  <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.241&lon=-119.852&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+</div>
+<div class="morestuff">
+  <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.852&lat=39.241#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+  <span class="awall">|</span>
+  <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.241&lon=-119.852&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+  <span class="awall">|</span>
+  <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+  <span class="awall">|</span>
+  <span><a href="https://www.windy.com/39.241/-119.852/wind?39.241,-119.852,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+  <span class="awall">|</span>
+  <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+  <span class="awall">|</span>
+  <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+  <span class="awall">|</span>
+  <span><a href="https://www.google.com/maps/place/39.241,-119.852" target="_blank">39.241, -119.852</a></span>
+</div>
+</div>
+
+
+
+<!-- kingsbury -->
+<div id="kingsbury" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">kingsbury grade</div>
+    <div class="score" id="kingsbury_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=38.981&lon=-119.852&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.852&lat=38.981#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=38.981&lon=-119.852&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/38.981/-119.852/wind?38.981,-119.852,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/38.981,-119.852" target="_blank">38.981, -119.852</a></span>
+  </div>
+</div>
+
+<!-- peavine -->
+<div id="peavine" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_blue">peavine</div>
+    <div class="score" id="peavine_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.590&lon=-119.929&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.929&lat=39.590#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.590&lon=-119.929&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.590/-119.929/wind?39.590,-119.929,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.590,-119.929" target="_blank">39.590, -119.929</a></span>
+  </div>
+</div>
+
+<!-- rainbow_east -->
+<div id="rainbow_east" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">rainbow east</div>
+  <div class="score" id="rainbow_east_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.694&lon=-119.983&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.983&lat=39.694#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.694&lon=-119.983&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.694/-119.983/wind?39.694,-119.983,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://virga.sfsu.edu/scripts/jetstream_model_fcst.html" target="_blank">Jet Stream</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.694,-119.983" target="_blank">39.694, -119.983</a></span>
+  </div>
+</div>
+
+<!-- rainbow_west -->
+<div id="rainbow_west" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">rainbow west</div>
+  <div class="score" id="rainbow_west_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.694&lon=-119.983&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.983&lat=39.694#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.694&lon=-119.983&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.694/-119.983/wind?39.694,-119.983,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://virga.sfsu.edu/scripts/jetstream_model_fcst.html" target="_blank">Jet Stream</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.694,-119.983" target="_blank">39.694, -119.983</a></span>
+  </div>
+</div>
+
+<!-- slide -->
+<div id="slide" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_blue">slide mtn</div>
+  <div class="score" id="slide_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=39.319&lon=-119.867&wfo=REV&zcode=NVZ002&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.867&lat=39.319#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=39.319&lon=-119.867&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=REV&issuedby=REV&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/39.319/-119.867/wind?39.319,-119.867,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRNO&state=NV" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://virga.sfsu.edu/scripts/jetstream_model_fcst.html" target="_blank">Jet Stream</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/39.319,-119.867" target="_blank">39.319, -119.867</a></span>
+  </div>
+</div>
+
+
+<!-- owens -->
+<div id="owens" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">owens</div>
+    <div class="score"></div>
+</div>
+
+<!-- walts -->
+<div id="owens_walts" class="sitebox">
+  <div class="plusexpand">+</div>
+  <div class="title_site">owens walts point</div>
+  <div class="score" id="owens_walts_score"></div>
+  <div class="nws_image">
+    <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=36.472&lon=-118.115&wfo=VEF&zcode=CAZ519&gset=18&gdiff=5&unit=0&tinfo=PY8&ahour=0&pcmd=10101000000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+  </div>
+  <div class="morestuff">
+    <a href="http://sierrawx.com/" target="_blank">sierrawx</a>
+    <span class="awall">|</span>
+    <span><a href="https://embed.windy.com/embed2.html?lat=36.472&lon=-119.168&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=37.976&detailLon=-119.168&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=36.472&lon=-118.115#.WtTzaNPwbUI" target="_blank">7-day summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=36.472&lon=-118.115&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-118.115&lat=36.472#.Wtau-NPwbUI" target="_blank">NWS</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://sierragliding.us/" target="_blank">real-time sierra gliding</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+  </div>
+</div>
+
+<!-- lee vining -->
+<div id="owens_lee" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">owens lee vining</div>
+    <div class="score" id="owens_lee_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.9688&lon=-119.1939&wfo=REV&zcode=CAZ073&gset=18&gdiff=8&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <a href="http://sierrawx.com/" target="_blank">sierrawx</a>
+      <span class="awall">|</span>
+      <span><a href="https://embed.windy.com/embed2.html?lat=37.965&lon=-119.168&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=37.976&detailLon=-119.168&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.9763&lon=-119.1680#.WtTzaNPwbUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.9763&lon=-119.1680&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lon=-119.1680&lat=37.9763#.Wtau-NPwbUI" target="_blank">NWS</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sierragliding.us/" target="_blank">real-time sierra gliding</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+
+
+<!-- oregon -->
+<div id="oregon" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">oregon</div>
+    <div class="score"></div>
+</div>
+
+<!-- lakeview_blackcap -->
+<div id="lakeview_blackcap" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">lakeview blackcap</div>
+    <div class="score" id="lakeview_blackcap_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=42.204264&lon=-120.330122&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://embed.windy.com/embed2.html?lat=42.204264&lon=-120.330122&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=42.204264&detailLon=-120.330122&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=42.204264&lon=-120.330122#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=42.204264&lon=-120.330122&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KLKV&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+<!-- lakeview_dohertyslide -->
+<div id="lakeview_dohertyslide" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">lakeview doherty</div>
+    <div class="score" id="lakeview_dohertyslide_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=42.019267&lon=-117.3028&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://embed.windy.com/embed2.html?lat=42.019267&lon=-117.3028&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=42.019267&detailLon=-117.3028&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=42.019267&lon=-117.3028#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=42.019267&lon=-117.3028&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KLKV&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+<!-- lakeview_sugarhill -->
+<div id="lakeview_sugarhill" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">lakeview sugarhill</div>
+    <div class="score" id="lakeview_sugarhill_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=43.819367&lon=-117.3028&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://embed.windy.com/embed2.html?lat=43.819367&lon=-117.3028&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=43.819367&detailLon=-117.3028&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KLKV&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+<!-- lakeview_hadleybutte -->
+<div id="lakeview_hadleybutte" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">lakeview hadleybutte</div>
+    <div class="score" id="lakeview_hadleybutte_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=43.819367&lon=-117.3028&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://embed.windy.com/embed2.html?lat=43.819367&lon=-117.3028&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=43.819367&detailLon=-117.3028&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KLKV&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+<!-- pine -->
+<div id="pine" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">pine</div>
+    <div class="score" id="pine_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=43.819367&lon=-117.3028&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://embed.windy.com/embed2.html?lat=43.819367&lon=-117.3028&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=43.819367&detailLon=-117.3028&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=43.819367&lon=-117.3028&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KLKV&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+      <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/41.377,-122.195" target="_blank">43.8194, -117.3028</a></span>
+    </div>
+</div>
+
+<!-- shasta -->
+<div id="shasta" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">shasta</div>
+    <div class="score" id="shasta_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=41.377&lon=-122.195&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.195&lat=41.377#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=41.377&lon=-122.195&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/41.377/-122.195/wind?41.377,-122.195,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/41.377,-122.195" target="_blank">41.377, -122.195</a></span>
+  </div>
+</div>
+
+<!-- whaleback -->
+<div id="whaleback" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">whaleback</div>
+    <div class="score" id="whaleback_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=37.430&lon=-122.153&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+  <div class="morestuff">
+    <span><a href="https://forecast.weather.gov/MapClick.php?lon=-122.153&lat=37.430#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/MapClick.php?lat=37.430&lon=-122.153&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://forecast.weather.gov/product.php?site=STO&issuedby=STO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.windy.com/37.430/-122.153/wind?37.430,-122.153,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+    <span class="awall">|</span>
+    <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMHS&state=CA" target="_blank">Aviation Weather</a></span>
+    <span class="awall">|</span>
+    <span><a href="https://www.google.com/maps/place/37.430,-122.153" target="_blank">37.430, -122.153</a></span>
+  </div>
+</div>
+
+<!-- woodrat -->
+<div id="woodrat" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">woodrat</div>
+    <div class="score" id="woodrat_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=42.2218&lon=-123.0062&wfo=MFR&zcode=ORZ026&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lon=-123.0062&lat=42.2313#.WtYca9PwbUI" target="_blank">NWS Summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=42.2313&lon=-123.0062&unit=0&lg=english&FcstType=graphical" target="_blank">NWS Hourly</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=MFR&issuedby=MFR&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/42.2218/-123.0062/wind?42.2218,-123.0062,7,m:eHCacL2" target="_blank">Windy All Models</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KMFR&state=OR" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://rvhpa.org/woodrat-webcams/" target="_blank">Webcams</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.wunderground.com/wundermap?lat=42.23311615&lon=-111.9016&zoom=13&tl.play=0&tl.spd=2&groupSevere=1&groupHurricane=1&groupFire=1&groupCamsPhotos=1&groupRealEstate=1&eyedropper=0&extremes=0&fault=0&favs=0&femaflood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=1&rad.num=1&rad.spd=25&rad.opa=81&rad.type=00Q&rad.type2=&rad.smo=1&rad.noc=1&rad.stm=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&stateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=0&cams=0&pix=0" target="_blank">Real-time stations</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.wunderground.com/dashboard/pws/KOROREGO39" target="_blank">Woodrat Launch Wind Graph</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.wunderground.com/dashboard/pws/KORJACKS10" target="_blank">Longsword LZ Wind Graph</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.wunderground.com/forecast/us/or/medford?cm_ven=localwx_10day" target="_blank">Medford 10-day</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/oregon/satellite-interactive" target="_blank">Satellite</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.accuweather.com/en/us/ruch-or/97530/weather-radar/350293" target="_blank">Radar</a></span>
+      <span class="awall">|</span>
+    </div>
+</div>
+
+
+
+<!-- los angeles -->
+<div id="losangeles" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">los angeles</div>
+    <div class="score"></div>
+</div>
+
+<!-- marshall -->
+<div id="marshall" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">marshall</div>
+    <div class="score" id="marshall_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.2101&lon=-117.3028&wfo=SGX&zcode=CAZ055&gset=18&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=10001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.2101&lon=-117.3028#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.2101&lon=-117.3028&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=SGX&issuedby=SGX&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://embed.windy.com/embed2.html?lat=34.2101&lon=-117.3028&zoom=11&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=true&detailLat=34.2101&detailLon=-117.3028&metricWind=default&metricTemp=default" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KRAL&state=CA" target="_blank">Aviation Weather</a></span>
+       <span class="awall">|</span>
+      <span><a href="https://www.facebook.com/groups/marshall.crestline/" target="_blank">Facebook group</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/35.971,-121.453" target="_blank">34.2101, -117.3028</a></span>
+    </div>
+</div>
+
+<!-- santa barbara -->
+<div id="santa_barbara" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">santa barbara</div>
+    <div class="score"></div>
+</div>
+
+<!-- parma -->
+<div id="parma" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">parma, ej, vor</div>
+    <div class="score" id="parma_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.4827&lon=-119.7146&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.4827&lon=-119.7146#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.4827&lon=-119.7146&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=HFO&issuedby=HFO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/34.4827/-119.7146/wind?34.4827,-119.7146,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBA&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/34.4827,-119.7146" target="_blank">34.4827, -119.7146</a></span>
+    </div>
+</div>
+
+<!-- more_mesa -->
+<div id="more_mesa" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">more mesa, wilcox</div>
+    <div class="score" id="more_mesa_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.4179&lon=-119.7897&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.4179&lon=-119.7897#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.4179&lon=-119.7897&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=HFO&issuedby=HFO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/34.4179/-119.7897/wind?34.4179,-119.7897,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBA&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/34.4179,-119.7897" target="_blank">34.4179, -119.7897</a></span>
+    </div>
+</div>
+
+<!-- bates -->
+<div id="bates" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">bates beach</div>
+    <div class="score" id="bates_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.382&lon=-119.4841&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.3820&lon=-119.4841#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=34.3820&lon=-119.4841&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=HFO&issuedby=HFO&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/34.3820/-119.4841/wind?34.3820,-119.4841,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBA&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/34.3820,-119.4841" target="_blank">34.3820, -119.4841</a></span>
+    </div>
+</div>
+
+
+
+<!-- san luis obispo -->
+<div id="slo" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_exp">san luis obispo</div>
+    <div class="score"></div>
+</div>
+
+<!-- Cayucos -->
+<div id="cayucos" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">cayucos</div>
+    <div class="score" id="cayucos_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=35.4281&lon=-120.8729&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.4281&lon=-120.8729#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.4281&lon=-120.8729&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=LOX&issuedby=LOX&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/35.4281/-120.8729/wind?35.4281,-120.8729,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBP&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/35.4281,-120.8729" target="_blank">35.4281, -120.8729</a></span>
+    </div>
+</div>
+
+<!-- montana de oro -->
+<div id="mdo" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">montana de oro</div>
+    <div class="score" id="mdo_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=35.2932&lon=-120.8780&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.2932&lon=-120.8780#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.2932&lon=-120.8780&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=LOX&issuedby=LOX&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/35.2932/-120.8780/wind?35.2932,-120.8780,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBP&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/35.2932,-120.8780" target="_blank">35.2932, -120.8780</a></span>
+    </div>
+</div>
+
+<!-- laguna_lake -->
+<div id="laguna" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">laguna lake</div>
+    <div class="score" id="laguna_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.382&lon=-120.6838&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.2691&lon=-120.6838#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.2691&lon=-120.6838&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=LOX&issuedby=LOX&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/35.2691/-120.6838/wind?35.2691,-120.6838,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBP&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/35.2691,-120.6838" target="_blank">35.2691, -120.6838</a></span>
+    </div>
+</div>
+
+<!-- cuesta_lake -->
+<div id="cuesta" class="sitebox">
+    <div class="plusexpand">+</div>
+    <div class="title_site">cuesta grande</div>
+    <div class="score" id="cuesta_score"></div>
+    <div class="nws_image">
+      <img alt="#" src="https://forecast.weather.gov/meteograms/Plotter.php?lat=34.382&lon=-120.6449&wfo=LOX&zcode=CAZ039&gset=15&gdiff=3&unit=0&tinfo=PY8&ahour=0&pcmd=00001110000000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6" width="640"  />
+    </div>
+    <div class="morestuff">
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.3470&lon=-120.6449#.WwIlZFMvzUI" target="_blank">7-day summary</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/MapClick.php?lat=35.3470&lon=-120.6449&unit=0&lg=english&FcstType=graphical" target="_blank">7-day wind</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://forecast.weather.gov/product.php?site=LOX&issuedby=LOX&product=AFD&format=CI&version=1&glossary=1" target="_blank">NWS Discussion</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://sbsa.info/weather/" target="_blank">SBSA Weather Page</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.windy.com/35.3470/-120.6449/wind?35.3470,-120.6449,8,m:eIFacLo" target="_blank">Windy</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.xcskies.com/map?profile_id=32870" target="_blank">XC Skies</a></span>
+      <span class="awall">|</span>
+      <span><a href="http://www.usairnet.com/cgi-bin/launch/code.cgi?Submit=Go&sta=KSBP&state=CA" target="_blank">Aviation Weather</a></span>
+      <span class="awall">|</span>
+      <span><a href="https://www.google.com/maps/place/35.3470,-120.6449" target="_blank">35.3470, -120.6449</a></span>
+    </div>
+</div>
+
+
+<div id="bottom"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+
+    <!-- <script src="weatheralert.js"></script> -->
+    <script src="weatheralert.js"></script>
+
+  </body>
+</html>
